@@ -118,7 +118,7 @@ class PokemonCard {
         <img src="Images/shiny-effect.gif" alt="" class="shiny-effect">
       </div>
       <div class="stats-panel">
-        <ul>
+        <ul class="ul-stats">
           <li><strong>Encounters :</strong> ${this.encounters}</li>
           <li><strong>Encounter type :</strong> ${this.method}</li>
           <li><strong>Pokédex :</strong> ${this.dex}</li>

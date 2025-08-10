@@ -910,3 +910,15 @@ a {
 .wavy-text-y {
     margin: 0; /* enlève marges par défaut du h2 */
 }
+
+.ul-stats {
+  color: #ffffff;           /* texte sombre pour bien contraster */
+  background-color: rgba(0, 0, 0, 0.3); /* fond blanc légèrement transparent pour mieux lire */
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 300px;         /* optionnel, pour limiter la largeur */
+  box-shadow: 0 0 8px rgba(0,0,0,0.15); /* légère ombre pour détacher */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
