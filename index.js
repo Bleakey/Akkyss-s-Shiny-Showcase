@@ -174,6 +174,7 @@ const pokemonList = [
   { name: "meowth", img: "meowth.gif", dex: "?", method: "5x hordes", sold: "?", encounters: 0, video: "" },
   { name: "petilil", img: "petilil.gif", dex: "?", method: "3x hordes", sold: "?", encounters: 0, video: "" },
   { name: "miltank", img: "miltank.gif", dex: "?", method: "Singles", sold: "?", encounters: 0, video: "" },
+  { name: "breloom", img: "breloom.gif", dex: "?", method: "Singles", sold: "?", encounters: 0, video: "" },
   { name: "milotic", img: "milotic.gif", dex: "?", method: "Singles", sold: "?", encounters: 0, video: "" },
   { name: "sneasel", img: "sneasel.gif", dex: "?", method: "5x hordes", sold: "?", encounters: 0, video: "" },
   { name: "weavile-f", img: "weavile-f.gif", dex: "?", method: "5x hordes", sold: "?", encounters: 0, video: "" },
