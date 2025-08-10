@@ -114,7 +114,7 @@ class PokemonCard {
         <img src="Images/Shinys/${this.img}" 
              alt="${this.name}" 
              class="img-fluid main-img animate-on-load" 
-             ${videoAttr}>
+             ${videoAttr}   style="width: 110px; height: 110px; object-fit: contain;" >
         <img src="Images/shiny-effect.gif" alt="" class="shiny-effect">
       </div>
       <div class="stats-panel">
