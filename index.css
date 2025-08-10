@@ -1,0 +1,912 @@
+@import url('https://fonts.cdnfonts.com/css/public-pixel');
+
+@keyframes animation {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.block {
+    animation: animation 1s linear;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: rgb(80, 80, 80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: auto;
+}
+
+input::placeholder {
+    color: #000 !important;
+}
+
+.HeaderButton {
+    background-color: #2a78a5;
+    color: #000000;
+}
+
+.HeaderButton:hover,
+.HeaderButton.active {
+    color: #2a78a5;
+}
+
+.Shadow {
+    filter: drop-shadow(0px 0px 20px #000);
+}
+
+.ShadowOrange {
+    filter: drop-shadow(0px 0px 20px #2a78a5);
+}
+
+.ShadowStrong {
+    filter: drop-shadow(0px 0px 50px #000);
+}
+
+.BgDark {
+    background-color: #000;
+}
+
+input:focus {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.navbar-toggler img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.center-img {
+    display: block;
+    margin: 0 auto;
+}
+
+.hover-image img {
+    transition: 0.3s ease-in-out;
+}
+
+.hover-image img:hover {
+    content: url('images/Preview Hover.png');
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+strong {
+    color: #fcc11c;
+}
+
+#commander-placeholder {
+    background-color: #2a78a5;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.placeholder {
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    padding: 20px;
+    border-radius: 8px;
+    opacity: 100% !important;
+}
+
+.placeholder:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.placeholder h3 {
+    transition: color 0.3s ease;
+    color: #ffffff;
+}
+
+.placeholder:hover h3 {
+    color: #2a78a5;
+}
+
+.hover-container {
+    transition: all 0.3s ease;
+}
+
+.hover-container:hover {
+    transform: scale(1.05);
+}
+
+.hover-container .col-12 {
+    transition: all 0.3s ease;
+}
+
+.hover-container .col-12:hover {
+    transform: scale(1.1);
+}
+
+.hover-container img {
+    transition: all 0.3s ease;
+}
+
+.hover-container img:hover {
+    transform: scale(1.2);
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.header-img {
+    transition: all 0.8s ease;
+    will-change: transform, opacity;
+}
+
+.slideInFromLeft {
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+.fadeIn {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.scaleUp {
+    animation: scaleUp 1s ease-in-out;
+}
+
+.bounce {
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.bg-image.active {
+    opacity: 1;
+}
+
+img {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    object-fit: cover;
+}
+
+.noborder {
+    border: none;
+}
+
+/* ==== Modification importante ici ==== */
+.image-wrapper {
+    position: relative;
+    overflow: visible;
+    /* Permet aux drop-shadow de s'afficher pleinement */
+    display: inline-flex;
+    border-radius: 10px;
+}
+
+.image-wrapper img.main-img {
+    border-radius: 10px;
+    transition: transform 0.4s ease-in-out;
+    display: block;
+    width: 120%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.image-wrapper:hover img.main-img {
+    transform: scale(1.2);
+}
+
+.image-wrapper .shiny-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.image-wrapper:hover .shiny-effect {
+    opacity: 1;
+}
+
+.blur-all-but-focus {
+    filter: blur(5px);
+    transition: filter 0.3s ease;
+}
+
+/* Annulation du flou sur l'élément focus */
+.image-wrapper.focused {
+    filter: none !important;
+    position: relative;
+    z-index: 10;
+}
+
+.stats-panel {
+    position: relative;
+    /* changer absolute en relative */
+    top: auto;
+    left: auto;
+    width: 100%;
+    /* pour prendre la largeur complète sous l’image */
+    padding: 10px;
+    background: rgba(10, 10, 10, 0.95);
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 5px #fff2, 0 0 10px #000a;
+    color: #f0f0f0;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    line-height: 1.8;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 10px;
+    image-rendering: pixelated;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    background-image: url('Images/landscape.gif');
+    background-size: cover;
+    margin-top: 10px;
+    /* espace au-dessus */
+    z-index: auto;
+}
+
+/* Limite la largeur du panneau stats et centre */
+.stats-panel {
+    max-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Affiche le panel quand image-wrapper a la classe focused */
+.image-wrapper.focused+.stats-panel {
+    opacity: 1;
+    pointer-events: auto;
+    animation: fadeInStats 0.3s ease-out forwards, panelTilt 2s ease-in-out infinite;
+}
+
+@keyframes fadeInStats {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.pokemon-card .stats-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    transform: skewX(-25deg);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.pokemon-card .stats-panel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-radius: 10px;
+    background: transparent;
+    box-shadow:
+        10% 20% 0 1px white,
+        30% 50% 0 1.5px white,
+        60% 30% 0 1px white,
+        80% 70% 0 1.2px white,
+        50% 80% 0 1px white,
+        20% 60% 0 1.3px white;
+    mix-blend-mode: screen;
+}
+
+@keyframes panelTilt {
+    0% {
+        transform: skewY(5deg);
+    }
+
+    50% {
+        transform: skewY(-5deg);
+    }
+
+    100% {
+        transform: skewY(5deg);
+    }
+}
+
+#background-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('Images/background.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(0px);
+    z-index: -1;
+    pointer-events: none;
+    transition: filter 0.5s ease;
+}
+
+#background-blur.blur-active {
+    filter: blur(8px);
+}
+
+.btn {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    color: #fcc11c;
+    background-color: #2a78a5;
+    border: 2px solid #fcc11c;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+    box-shadow: 0 0 10px #2a78a5;
+    user-select: none;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.btn:hover:not(:disabled) {
+    background-color: #fcc11c;
+    color: #2a78a5;
+    box-shadow: 0 0 20px #fcc11c;
+}
+
+.btn:disabled {
+    background-color: #444;
+    color: #999;
+    border-color: #666;
+    box-shadow: none;
+    cursor: default;
+    opacity: 0.7;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.image-blur {
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.2));
+}
+
+/* Ex: sur le body quand blur-active est actif */
+body.blur-active #background-blur {
+    filter: blur(8px);
+    transition: filter 0.3s ease;
+}
+
+body.blur-active .stats-panel {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.3s ease;
+}
+
+/* Stats panel caché par défaut */
+.stats-panel {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.pokemon-card.focused .stats-panel {
+    opacity: 1;
+    pointer-events: auto;
+    animation: fadeInStats 0.3s ease-out forwards, panelTilt 2s ease-in-out infinite;
+}
+
+.pokemon-card {
+    position: relative;
+    display: inline-block;
+    margin: 30px;
+    /* augmenté pour plus d'espace */
+    vertical-align: top;
+}
+
+/* Aura or (déjà existante) */
+.main-img.aura-gold {
+    filter:
+        drop-shadow(0 0 5px rgba(255, 215, 0, 0.7)) drop-shadow(0 0 15px rgba(255, 215, 0, 0.5));
+}
+
+/* Aura bleue */
+.main-img.aura-blue {
+    filter:
+        drop-shadow(0 0 5px rgba(0, 191, 255, 0.7)) drop-shadow(0 0 15px rgba(0, 191, 255, 0.5));
+}
+
+/* Aura violette */
+.main-img.aura-purple {
+    filter:
+        drop-shadow(0 0 5px rgba(138, 43, 226, 0.7)) drop-shadow(0 0 15px rgba(138, 43, 226, 0.5));
+}
+
+/* Aura rouge */
+.main-img.aura-red {
+    filter:
+        drop-shadow(0 0 5px rgba(255, 50, 50, 0.7)) drop-shadow(0 0 15px rgba(255, 50, 50, 0.5));
+}
+
+/* Aura verte */
+.main-img.aura-green {
+    filter:
+        drop-shadow(0 0 5px rgba(50, 255, 50, 0.7)) drop-shadow(0 0 15px rgba(50, 255, 50, 0.5));
+}
+
+/* Aura rose */
+.main-img.aura-pink {
+    filter:
+        drop-shadow(0 0 5px rgba(255, 105, 180, 0.7)) drop-shadow(0 0 15px rgba(255, 105, 180, 0.5));
+}
+
+/* Aura cyan */
+.main-img.aura-cyan {
+    filter:
+        drop-shadow(0 0 5px rgba(0, 255, 255, 0.7)) drop-shadow(0 0 15px rgba(0, 255, 255, 0.5));
+}
+
+/* Aura blanche */
+.main-img.aura-white {
+    filter:
+        drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)) drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
+}
+
+/* Aura noire */
+.main-img.aura-black {
+    filter:
+        drop-shadow(0 0 5px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 15px rgba(0, 0, 0, 0.6));
+}
+
+/* Aura orange */
+.main-img.aura-orange {
+    filter:
+        drop-shadow(0 0 5px rgba(255, 165, 0, 0.7)) drop-shadow(0 0 15px rgba(255, 165, 0, 0.5));
+}
+
+/* Aura turquoise */
+.main-img.aura-turquoise {
+    filter:
+        drop-shadow(0 0 5px rgba(64, 224, 208, 0.7)) drop-shadow(0 0 15px rgba(64, 224, 208, 0.5));
+}
+
+/* Aura arc-en-ciel (simulation avec multishadow) */
+.main-img.aura-rainbow {
+    filter:
+        drop-shadow(0 0 3px red) drop-shadow(0 0 6px orange) drop-shadow(0 0 9px yellow) drop-shadow(0 0 12px green) drop-shadow(0 0 15px blue) drop-shadow(0 0 18px indigo) drop-shadow(0 0 21px violet);
+}
+
+/* Aura glitch (effet un peu perturbé) */
+.main-img.aura-glitch {
+    filter:
+        drop-shadow(2px 0 rgba(255, 0, 0, 0.7)) drop-shadow(-2px 0 rgba(0, 0, 255, 0.7)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: #fc1c1c;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #dba800;
+    border-radius: 4px;
+}
+
+/* Masquer la scrollbar horizontale */
+body {
+  overflow-x: hidden;
+}
+
+@keyframes pulse-gold {
+    0% {
+        box-shadow: 0 0 0px gold;
+    }
+
+    50% {
+        box-shadow: 0 0 15px gold;
+    }
+
+    100% {
+        box-shadow: 0 0 0px gold;
+    }
+}
+
+.gold-border-animated {
+    box-shadow: 0 0 10px gold;
+    border: 3px solid gold;
+    animation: pulse-gold 1.5s infinite ease-in-out;
+    border-radius: 10px;
+    /* si tu veux un effet plus doux */
+}
+
+/* === Pokémon Summary Layout === */
+.pokemon-summary {
+    display: flex;
+    flex-direction: row;
+    /* Aligne les blocs horizontalement */
+    align-items: center;
+    /* Centre verticalement */
+    justify-content: center;
+    gap: 1.5rem;
+    /* Espace entre les blocs */
+    padding: 1rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    flex-wrap: wrap;
+    /* Permet le retour à la ligne si nécessaire */
+}
+
+.pokemon-summary:hover {
+    transform: scale(1.02);
+}
+
+/* === Pokémon Sprite === */
+.pokemon-img {
+    width: 130px;
+    image-rendering: pixelated;
+    transition: filter 0.3s ease;
+}
+
+/* Effet lumineux autour du sprite */
+.shadow-glow {
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.7));
+}
+
+/* === Stat Blocks (EVs, IVs, Items) === */
+.stat-block,
+.skill-block,
+.trainer-block,
+.strat-block {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0.7rem 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
+    min-width: 130px;
+}
+
+/* Bloc de stratégie : version plus large */
+.strat-block {
+    max-width: 400px;
+}
+
+/* === Grille pour stats === */
+.iv-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+    font-size: 0.95rem;
+}
+
+/* === IV parfaits === */
+.perfect-iv {
+    color: #00ff9d;
+    font-weight: bold;
+    animation: perfect-glow 2s ease-in-out infinite;
+}
+
+@keyframes perfect-glow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 6px #00ff9d, 0 0 12px #00c3ff;
+    }
+
+    50% {
+        text-shadow: 0 0 12px #00ff9d, 0 0 24px #00c3ff;
+    }
+}
+
+/* === Skills (capacités Pokémon) === */
+.skill-block div {
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+    cursor: default;
+    transition: color 0.3s ease;
+}
+
+/* === Type Colors (ajoute d'autres au besoin) === */
+.type-grass {
+    color: #78C850;
+}
+
+.type-water {
+    color: #68bef0;
+}
+
+.type-fire {
+    color: #F08030;
+}
+
+.type-flying {
+    color: #a0a0a0;
+}
+
+.type-electric {
+    color: #F8D030;
+}
+
+.type-normal {
+    color: #ffffff;
+}
+
+.type-psychic {
+    color: #ff00bf;
+}
+
+.type-ice {
+    color: #b0efff;
+}
+
+.type-ground {
+    color: #644100;
+}
+
+/* === Section par tour === */
+.turn {
+    margin-bottom: 1rem;
+}
+
+.turn h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.turn ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.attack {
+    color: #74c2e1;
+}
+
+.glow {
+    color: #ff1414;
+    /* Bright green */
+    text-shadow:
+        0 0 5px #790000,
+        0 0 10px #ffffff62;
+    font-weight: bold;
+}
+
+.trainers {
+    filter: drop-shadow(10px 10px 6px rgba(0, 0, 0, 0.8));
+    border-radius: 12px;
+    /* keeps rounded corners if your image has them */
+    transition: filter 0.3s ease;
+}
+
+hr {
+    border: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #ff00cc, #3333ff, #ff00cc, transparent);
+    background-size: 200% auto;
+    animation: sparkle 2s linear infinite;
+    margin: 2em 0;
+}
+
+@keyframes sparkle {
+    0% {
+        background-position: 200% center;
+    }
+
+    100% {
+        background-position: -200% center;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.modal .modal-header {
+    border-bottom: none !important;
+}
+
+#modalClose {
+    font-size: 18px;
+    /* bigger cross */
+    line-height: 1;
+    padding: 8px 12px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2100;
+}
+
+.wip-container {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.wavy-text span {
+    display: inline-block;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+    animation: wave 1.5s infinite ease-in-out;
+}
+
+.wavy-text-y span {
+    display: inline-block;
+    font-size: 2rem;
+    /* Corps vert pâle, rappel du corps de Breloom shiny */
+    color: #e7c501;
+    /* Éclat brillant, pour imiter un effet lumineux/moussant */
+    text-shadow:
+        0 0 8px #c77700,
+        /* halo lumineux jaune pâle */
+        0 0 16px #f28217;
+
+    animation: wave 1.5s infinite ease-in-out, glow 3s infinite ease-in-out;
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 8px #fffacd, 0 0 16px #f28217;
+    }
+
+    50% {
+        text-shadow: 0 0 12px #fffacd, 0 0 24px #f28217;
+    }
+}
+
+.wavy-text-y span {}
+
+/* Each span gets a delay to make the wave effect */
+.wavy-text span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.wavy-text span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.wavy-text span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.wavy-text span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.wavy-text span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.wavy-text span:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.wavy-text span:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.sprite-title {
+    display: flex;
+    align-items: center; /* aligne les sprites et le texte verticalement */
+    justify-content: center; /* centre le tout horizontalement */
+    gap: 10px; /* espace entre sprite et texte */
+}
+
+.sprite {
+    width: 120px;
+    height: auto;
+    image-rendering: pixelated; /* garde l'effet pixel art */
+    filter: drop-shadow(0px 0px 20px #000);
+}
+
+.wavy-text-y {
+    margin: 0; /* enlève marges par défaut du h2 */
+}
